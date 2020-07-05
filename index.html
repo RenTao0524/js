@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  // function handleClick() {
+  //   console.log(this)
+  //   console.log(e)
+  // }
+  </script>
+  <p id="btn">1212</p>
+  <script>
+    document.getElementById('btn').addEventListener('click', e => {
+      console.log(e)
+  e.currentTarget.style.backgroundColor = '#A5D9F3';
+    })
+    var obj = {
+  bar: function() {
+    var x = (() => this)();
+    return x;
+  }
+};
+
+// 作为obj对象的一个方法来调用bar，把它的this绑定到obj。
+// 将返回的函数的引用赋值给fn。
+var fn = obj.bar();
+console.log(fn)
+var fn2 = obj.bar
+console.log(fn2())
+  </script>
+</body>
+</html>
